@@ -30,6 +30,7 @@ export default function ServicesPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">CCTV Camera Installation &amp; Security Services in Delhi NCR — RK ENTERPRISES</h1>
       <SEO
         title="CCTV Installation, Repair, Maintenance & Upgrades"
         description="Comprehensive surveillance services by RK ENTERPRISES: CCTV installation, DVR/NVR configuration, camera upgrades, remote mobile viewing, and free site surveys."

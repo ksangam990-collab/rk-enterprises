@@ -58,6 +58,7 @@ export default function InstallationPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">Professional CCTV Installation Standards in Delhi NCR — RK ENTERPRISES</h1>
       <SEO
         title="Installation Standards & Workmanship"
         description="Discover RK ENTERPRISES strict CCTV installation standards: 100% copper cabling, weatherproof junction boxes, conduit casing, and zero blind spots."

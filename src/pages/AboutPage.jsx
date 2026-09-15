@@ -28,6 +28,7 @@ export default function AboutPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">About RK ENTERPRISES — Trusted CCTV &amp; Security Specialists in Delhi NCR</h1>
       <SEO
         title="About Us — Trusted CCTV & Security Specialists"
         description="Learn how RK ENTERPRISES delivers dependable CCTV surveillance, authentic brand equipment, and neat wiring for homes and commercial establishments."

@@ -1,0 +1,8 @@
+# robots.txt — RK ENTERPRISES
+# https://rkenterprises-cctv.in
+
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://rkenterprises-cctv.in/sitemap.xml

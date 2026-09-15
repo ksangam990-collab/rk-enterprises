@@ -49,6 +49,7 @@ export default function ContactPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">Contact RK ENTERPRISES — CCTV Sales, Installation &amp; Support in Delhi NCR</h1>
       <SEO
         title="Contact RK ENTERPRISES — CCTV Sales & Support"
         description="Call, WhatsApp, or message RK ENTERPRISES for fast CCTV installation quotes, repair visits, and security consultations in New Delhi and NCR."

@@ -29,6 +29,7 @@ export default function ProductsPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">CCTV Cameras, DVRs &amp; Security Equipment — RK ENTERPRISES Delhi NCR</h1>
       <SEO
         title="CCTV Cameras, DVRs, NVRs & Security Equipment"
         description="Browse genuine CCTV cameras, 24/7 color night vision, IP PoE cameras, Wi-Fi 360° cameras, DVRs, and surveillance hard drives at RK ENTERPRISES."

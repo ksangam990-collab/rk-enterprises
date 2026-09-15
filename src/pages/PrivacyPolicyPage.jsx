@@ -7,6 +7,7 @@ import SEO from '../components/common/SEO';
 export default function PrivacyPolicyPage() {
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">Privacy Policy — RK ENTERPRISES</h1>
       <SEO
         title="Privacy Policy & Data Security"
         description="RK ENTERPRISES customer data protection and private video footage confidentiality policy."

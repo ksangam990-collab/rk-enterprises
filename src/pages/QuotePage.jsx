@@ -101,6 +101,7 @@ export default function QuotePage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">Get a Free CCTV Installation Quote &amp; Site Survey — RK ENTERPRISES</h1>
       <SEO
         title="Get a CCTV Installation Quote & Site Survey"
         description="Configure your property type and camera requirements to receive a fast, customized quote and schedule a free on-site survey with RK ENTERPRISES."

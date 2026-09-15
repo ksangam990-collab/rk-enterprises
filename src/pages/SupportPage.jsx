@@ -37,9 +37,28 @@ export default function SupportPage() {
 
   return (
     <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-security-950 min-h-screen">
+      <h1 className="sr-only">CCTV Support, Troubleshooting &amp; After-Sales Assistance — RK ENTERPRISES</h1>
       <SEO
         title="Customer Support & CCTV Troubleshooting"
         description="Quick diagnostics for CCTV video loss, offline mobile apps, and DVR beeps. Contact RK ENTERPRISES for technician support and warranty assistance."
+      />
+      {/* FAQPage structured data for Google rich results & AI answer engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(faq => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
       />
       <div className="max-w-7xl mx-auto space-y-16">
         <SectionHeading
