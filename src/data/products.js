@@ -56,7 +56,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1481597262637-0545b18186ea?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "bullet-cam-5mp-outdoor",
@@ -88,7 +88,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578096241494-6cc439ab21ad?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "colorvu-night-vision-camera",
@@ -120,7 +120,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1529265895721-65945a176cff?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "ip-poe-4k-camera",
@@ -152,7 +152,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "wifi-smart-ptz-indoor-camera",
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1481597262637-0545b18186ea?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "ptz-optical-zoom-speed-dome",
@@ -216,7 +216,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578096241494-6cc439ab21ad?auto=format&fit=crop&w=800&q=80",
   },
 
   // --- RECORDING & STORAGE ---
