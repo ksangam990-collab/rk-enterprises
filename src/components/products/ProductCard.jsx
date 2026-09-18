@@ -19,6 +19,12 @@ export default function ProductCard({ product, onQuickQuote }) {
         boxShadow: '0 28px 56px -12px rgba(0,0,0,0.7), 0 0 24px -6px rgba(239,68,68,0.15)',
         transition: { duration: 0.25, ease: 'easeOut' },
       }}
+      whileTap={{
+        y: -4,
+        boxShadow: '0 14px 28px -8px rgba(0,0,0,0.6), 0 0 16px -4px rgba(239,68,68,0.18)',
+        scale: 0.99,
+        transition: { duration: 0.15, ease: 'easeOut' },
+      }}
     >
       {/* Top Image Container */}
       <div className="relative w-full h-52 bg-security-950 overflow-hidden">

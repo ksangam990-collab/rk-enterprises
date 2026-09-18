@@ -39,7 +39,7 @@ export default function FloatingActions() {
       </aside>
 
       {/* Mobile Sticky Bottom Lead Generation Bar */}
-      <nav aria-label="Mobile quick actions" className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-security-950/95 backdrop-blur-xl border-t border-slate-800 p-2 shadow-2xl safe-area-pb">
+      <nav aria-label="Mobile quick actions" className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-security-950/95 backdrop-blur-xl border-t border-slate-800 pb-8 pt-2 px-2 shadow-2xl safe-area-pb">
         <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
           {/* Call Button */}
           <a

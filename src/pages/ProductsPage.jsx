@@ -71,7 +71,7 @@ export default function ProductsPage() {
             </div>
 
             {/* Category Switcher */}
-            <div className="md:col-span-5 flex items-center justify-start md:justify-end gap-1.5 overflow-x-auto pb-1 md:pb-0">
+            <div className="md:col-span-5 flex items-center justify-start md:justify-end gap-2 overflow-x-auto no-scrollbar py-1 -mx-1 px-1 sm:mx-0 sm:px-0">
               {PRODUCT_CATEGORIES.map((cat) => (
                 <button
                   key={cat.id}
@@ -79,7 +79,7 @@ export default function ProductsPage() {
                     setSelectedCategory(cat.id);
                     setSelectedSubType('All Types');
                   }}
-                  className={`px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                  className={`px-3 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all shrink-0 active:scale-95 ${
                     selectedCategory === cat.id
                       ? 'bg-brand-red text-white border border-brand-red shadow-md'
                       : 'bg-security-950 text-slate-300 hover:text-white border border-slate-800'
@@ -93,16 +93,17 @@ export default function ProductsPage() {
 
           {/* Camera Subtypes Filters (shown when CCTV Cameras or All selected) */}
           {(selectedCategory === 'all' || selectedCategory === 'cctv-cameras') && (
-            <div className="pt-3 border-t border-slate-800 flex items-center gap-2 overflow-x-auto text-xs pb-1">
-              <span className="text-slate-400 font-medium shrink-0 flex items-center gap-1">
+            <div className="pt-3 border-t border-slate-800 flex items-center gap-2 overflow-x-auto no-scrollbar text-xs py-1 -mx-1 px-1 sm:mx-0 sm:px-0">
+              <span className="text-slate-400 font-medium shrink-0 flex items-center gap-1 pr-1">
                 <SlidersHorizontal className="w-3.5 h-3.5 text-brand-red" />
-                <span>Camera Subtypes:</span>
+                <span className="hidden sm:inline">Camera Subtypes:</span>
+                <span className="sm:hidden">Type:</span>
               </span>
               {CAMERA_SUBTYPES.map((subType) => (
                 <button
                   key={subType}
                   onClick={() => setSelectedSubType(subType)}
-                  className={`px-2.5 py-1 rounded-full whitespace-nowrap font-medium transition-colors ${
+                  className={`px-3 py-1.5 rounded-full whitespace-nowrap font-medium transition-all shrink-0 active:scale-95 ${
                     selectedSubType === subType
                       ? 'bg-slate-200 text-slate-950 font-bold'
                       : 'bg-security-950 text-slate-400 hover:text-slate-200 border border-slate-800'
