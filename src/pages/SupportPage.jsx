@@ -126,7 +126,7 @@ export default function SupportPage() {
                   {item.likelyCause}
                 </div>
 
-                <div className="pt-2 text-xs text-slate-300 bg-security-950 p-3 rounded-xl border border-slate-850">
+                <div className="pt-2 text-xs text-slate-300 bg-security-950 p-3 rounded-xl border border-slate-800">
                   <strong className="text-emerald-400 block mb-1">Recommended Action:</strong>
                   {item.solution}
                 </div>

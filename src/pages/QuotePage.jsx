@@ -133,7 +133,7 @@ export default function QuotePage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-security-950 border border-slate-855 text-left font-mono text-xs text-slate-300 max-w-lg mx-auto whitespace-pre-line">
+                <div className="p-4 rounded-xl bg-security-950 border border-slate-800 text-left font-mono text-xs text-slate-300 max-w-lg mx-auto whitespace-pre-line">
                   {generatedMessage}
                 </div>
 
@@ -406,29 +406,29 @@ export default function QuotePage() {
               </div>
 
               <div className="space-y-3 text-xs">
-                <div className="flex justify-between py-1.5 border-b border-slate-850 text-slate-300">
+                <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
                   <span className="text-slate-400">Selected Setup:</span>
                   <strong className="text-white">{formData.cameraCount}</strong>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-slate-850 text-slate-300">
+                <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
                   <span className="text-slate-400">Recorder Unit:</span>
                   <strong className="text-white">Compatible 4CH / 8CH / 16CH DVR/NVR</strong>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-slate-850 text-slate-300">
+                <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
                   <span className="text-slate-400">Surveillance HDD:</span>
                   <strong className="text-white">{formData.storageRequirement.split('(')[0]}</strong>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-slate-850 text-slate-300">
+                <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
                   <span className="text-slate-400">Power Supply:</span>
                   <strong className="text-white">Centralized SMPS with Surge Protection</strong>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-slate-850 text-slate-300">
+                <div className="flex justify-between py-1.5 border-b border-slate-800 text-slate-300">
                   <span className="text-slate-400">Mobile Setup:</span>
                   <strong className="text-emerald-400">Included Free (Android & iOS)</strong>
                 </div>
               </div>
 
-              <div className="p-3 rounded-xl bg-security-950 border border-slate-850 text-xs text-slate-400 leading-relaxed">
+              <div className="p-3 rounded-xl bg-security-950 border border-slate-800 text-xs text-slate-400 leading-relaxed">
                 💡 <strong className="text-slate-200">RK Enterprises Promise:</strong> Our technician inspects your premises in person to calculate exact wire measurements, ensuring you never pay for unnecessary materials.
               </div>
             </div>
@@ -445,7 +445,7 @@ export default function QuotePage() {
               <div className="space-y-2">
                 <a
                   href={getPhoneLink()}
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-security-850 border border-slate-700 text-white font-bold text-sm hover:border-brand-red transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-security-800 border border-slate-700 text-white font-bold text-sm hover:border-brand-red transition-colors"
                 >
                   <Phone className="w-4 h-4 text-brand-red" />
                   <span>Call: {BUSINESS_CONFIG.phone}</span>

@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // Map Google Fonts loaded in index.html
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
       colors: {
         security: {
           950: '#060a12',
@@ -25,7 +30,12 @@ export default {
           'blue-light': '#60a5fa',
           cyan: '#06b6d4',
           whatsapp: '#25D366',
-        }
+        },
+        // Explicit slate-850/855 aliases so Tailwind generates the classes
+        slate: {
+          850: '#172032',
+          855: '#1a2537',
+        },
       },
       animation: {
         'scan': 'scan 3s linear infinite',

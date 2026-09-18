@@ -4,16 +4,30 @@ import { BUSINESS_CONFIG, getWhatsAppLink, getPhoneLink } from '../../data/confi
 import { handleImageError } from '../../utils/imageFallback';
 import Button from '../ui/Button';
 
+const INITIAL_FORM = {
+  name: '',
+  phone: '',
+  installationRequired: 'Yes',
+  quantity: '1',
+  message: ''
+};
+
 export default function QuickQuoteModal({ product, isOpen, onClose }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    installationRequired: 'Yes',
-    quantity: '1',
-    message: ''
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  // BUG FIX 1: Reset the form AND submitted state whenever the modal opens
+  // or opens for a different product. Previously, if a user submitted for
+  // Product A, closed the modal, then opened it for Product B, they would
+  // see the "WhatsApp Enquiry Generated!" success screen for the wrong product.
+  useEffect(() => {
+    if (isOpen) {
+      setFormData(INITIAL_FORM);
+      setSubmitted(false);
+      setErrorMsg('');
+    }
+  }, [isOpen, product?.id]);
 
   // Handle escape key & background scroll lock
   useEffect(() => {
@@ -30,7 +44,10 @@ export default function QuickQuoteModal({ product, isOpen, onClose }) {
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      // BUG FIX 2: Use '' instead of 'unset' for wider browser compatibility.
+      // 'unset' resets to the CSS initial value but '' actually removes the
+      // inline style, properly restoring any stylesheet-applied overflow.
+      document.body.style.overflow = '';
     };
   }, [isOpen, onClose]);
 
@@ -72,6 +89,7 @@ export default function QuickQuoteModal({ product, isOpen, onClose }) {
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
+      role="presentation"
     >
       <div 
         className="relative w-full max-w-lg bg-security-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden"
@@ -162,14 +180,14 @@ export default function QuickQuoteModal({ product, isOpen, onClose }) {
 
               {/* Error announcement */}
               {errorMsg && (
-                <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center gap-2 text-xs text-red-400">
+                <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center gap-2 text-xs text-red-400" role="alert">
                   <AlertCircle className="w-4 h-4 shrink-0" />
                   <span>{errorMsg}</span>
                 </div>
               )}
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label htmlFor="modal-name" className="block text-xs font-medium text-slate-300 mb-1">

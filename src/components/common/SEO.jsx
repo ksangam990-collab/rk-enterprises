@@ -4,11 +4,17 @@ import { BUSINESS_CONFIG } from '../../data/config';
 
 const DOMAIN = 'https://rkenterprises-cctv.in';
 
+// BUG FIX: Added typeof document guard so this component is safe
+// during SSR (renderToString in entry-server.jsx). Without this,
+// calling document.querySelector on the server throws a ReferenceError.
 export default function SEO({ title, description }) {
   const location = useLocation();
   const canonicalUrl = `${DOMAIN}${location.pathname}`;
 
   useEffect(() => {
+    // This block only runs in the browser (useEffect never runs server-side)
+    if (typeof document === 'undefined') return;
+
     // ── Page title ────────────────────────────────────────────────
     const fullTitle = title
       ? `${title} | ${BUSINESS_CONFIG.businessName}`

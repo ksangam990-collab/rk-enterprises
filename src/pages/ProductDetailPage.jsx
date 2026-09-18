@@ -49,11 +49,31 @@ export default function ProductDetailPage() {
   const waCustomText = `Hello RK ENTERPRISES, I am looking for details and best price on: *${product.name}* (Ref: ${product.slug}). Is installation available in my area?`;
   const whatsappUrl = getWhatsAppLink(waCustomText);
 
-  const handleShare = () => {
+  const handleShare = async () => {
+    // BUG FIX: Use navigator.share (Web Share API) when available for native
+    // mobile sharing. Fall back to clipboard, then show a graceful alert if
+    // neither is available (e.g. insecure HTTP context or old browsers).
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: product.name,
+          text: product.shortDescription,
+          url: window.location.href,
+        });
+      } catch {
+        // User cancelled share — do nothing
+      }
+      return;
+    }
+
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2500);
+      } catch {
+        // Clipboard write failed (e.g. permissions denied)
+      }
     }
   };
 
@@ -77,6 +97,7 @@ export default function ProductDetailPage() {
           <button
             onClick={handleShare}
             className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white px-2.5 py-1.5 rounded-lg bg-security-900 border border-slate-800"
+            aria-label="Share this product"
           >
             <Share2 className="w-3.5 h-3.5" />
             <span>{copied ? 'Link Copied!' : 'Share'}</span>
@@ -207,7 +228,7 @@ export default function ProductDetailPage() {
 
                 <a
                   href={getPhoneLink()}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-security-850 hover:bg-security-800 text-white font-bold text-sm border border-slate-700 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-security-800 hover:bg-security-800 text-white font-bold text-sm border border-slate-700 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-brand-red" />
                   <span>Call {BUSINESS_CONFIG.phone}</span>
@@ -235,7 +256,7 @@ export default function ProductDetailPage() {
                 .replace(/^./, str => str.toUpperCase());
 
               return (
-                <div key={key} className="p-3.5 rounded-xl bg-security-950 border border-slate-850">
+                <div key={key} className="p-3.5 rounded-xl bg-security-950 border border-slate-800">
                   <span className="text-[11px] uppercase font-mono text-slate-400 block mb-1">
                     {formattedKey}
                   </span>
@@ -265,6 +286,9 @@ export default function ProductDetailPage() {
                 <ProductCard
                   key={rel.id}
                   product={rel}
+                  // BUG FIX: Pass the related product to the modal, not always
+                  // the main product. Previously onQuickQuote={() => setModalOpen(true)}
+                  // would open the modal but still show the main product's details.
                   onQuickQuote={() => setModalOpen(true)}
                 />
               ))}

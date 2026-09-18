@@ -9,13 +9,13 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const [prevPath, setPrevPath] = useState(location.pathname);
 
-  // Close mobile menu during render if route has changed
-  if (location.pathname !== prevPath) {
-    setPrevPath(location.pathname);
+  // BUG FIX: Replaced the setState-during-render anti-pattern (calling setPrevPath
+  // directly in the render body) with a proper useEffect that watches the pathname.
+  // The old pattern caused React warnings and could trigger double-renders.
+  useEffect(() => {
     setMobileMenuOpen(false);
-  }
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,7 +116,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main navigation">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -162,6 +162,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2.5 rounded-lg bg-security-850 border border-slate-800 text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-red"
                 aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-menu"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -189,6 +190,7 @@ export default function Navbar() {
 
             {/* Slide-down Drawer */}
             <motion.div
+              id="mobile-menu"
               key="drawer"
               className="lg:hidden fixed inset-x-0 top-[73px] sm:top-[113px] z-30 bg-security-950/98 backdrop-blur-xl border-b border-slate-800 shadow-2xl p-5 space-y-4 max-h-[calc(100vh-120px)] overflow-y-auto"
               initial={{ opacity: 0, y: -16 }}
@@ -196,7 +198,7 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
-              <nav className="flex flex-col space-y-1">
+              <nav className="flex flex-col space-y-1" aria-label="Mobile navigation">
                 {navLinks.map((link, idx) => (
                   <motion.div
                     key={link.path}

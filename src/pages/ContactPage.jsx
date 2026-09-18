@@ -289,7 +289,7 @@ export default function ContactPage() {
                 <span>Visit Our Office / Workshop</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-security-950 border border-slate-850 space-y-2 text-xs sm:text-sm text-slate-300">
+              <div className="p-4 rounded-xl bg-security-950 border border-slate-800 space-y-2 text-xs sm:text-sm text-slate-300">
                 <strong className="text-white block text-sm">{BUSINESS_CONFIG.businessName}</strong>
                 <p className="leading-relaxed">
                   {BUSINESS_CONFIG.address}
@@ -316,7 +316,7 @@ export default function ContactPage() {
                 href={BUSINESS_CONFIG.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-security-850 hover:bg-security-800 border border-slate-700 text-xs font-semibold text-brand-blue-light transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-security-800 hover:bg-security-800 border border-slate-700 text-xs font-semibold text-brand-blue-light transition-colors"
               >
                 <span>Get Driving Directions on Google Maps</span>
                 <ExternalLink className="w-3.5 h-3.5" />

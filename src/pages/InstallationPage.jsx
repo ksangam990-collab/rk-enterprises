@@ -113,21 +113,21 @@ export default function InstallationPage() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
-            <div className="p-4 rounded-xl bg-security-950 border border-slate-850 space-y-2">
+            <div className="p-4 rounded-xl bg-security-950 border border-slate-800 space-y-2">
               <strong className="text-brand-red block font-semibold">1. Using Copper-Clad Aluminum (CCA) Cables</strong>
               <p className="text-slate-400 leading-relaxed">
                 Cheap CCA cables corrode rapidly and cause signal ghosting within months. We exclusively use pure electrolytic copper cables with high braid shielding.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-security-950 border border-slate-850 space-y-2">
+            <div className="p-4 rounded-xl bg-security-950 border border-slate-800 space-y-2">
               <strong className="text-brand-red block font-semibold">2. Exposed Joints Without Weather Boxes</strong>
               <p className="text-slate-400 leading-relaxed">
                 Taping connectors without waterproof boxes causes rain water ingress, leading to short circuits and burnt DVR channels. Every outdoor camera gets a sealed junction box.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-security-950 border border-slate-850 space-y-2">
+            <div className="p-4 rounded-xl bg-security-950 border border-slate-800 space-y-2">
               <strong className="text-brand-red block font-semibold">3. Standard Desktop Hard Drives</strong>
               <p className="text-slate-400 leading-relaxed">
                 Installing ordinary desktop HDDs leads to disk crashes under continuous 24/7 writes. We only supply dedicated surveillance hard drives (WD Purple/SkyHawk).

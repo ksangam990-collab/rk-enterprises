@@ -132,7 +132,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <a
               href={getPhoneLink()}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-security-850 hover:bg-security-800 border border-slate-700 text-white font-semibold text-xs sm:text-sm transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-security-800 hover:bg-security-800 border border-slate-700 text-white font-semibold text-xs sm:text-sm transition-colors"
             >
               <Phone className="w-4 h-4 text-brand-red" />
               <span>{BUSINESS_CONFIG.phone}</span>

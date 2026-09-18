@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
               >
                 <div>
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-security-850 border border-slate-750 text-brand-red flex items-center justify-center mb-4"
+                    className="w-12 h-12 rounded-xl bg-security-850 border border-slate-700 text-brand-red flex items-center justify-center mb-4"
                     whileHover={{ scale: 1.1, rotate: 8 }}
                     transition={{ duration: 0.25 }}
                   >

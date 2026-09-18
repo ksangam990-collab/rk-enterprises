@@ -58,7 +58,7 @@ export default function ProcessTimeline() {
                 {/* Step number & Icon */}
                 <div className="flex items-center justify-between mb-5">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-security-950 border border-slate-750 text-brand-red flex items-center justify-center shadow-md"
+                    className="w-12 h-12 rounded-xl bg-security-950 border border-slate-700 text-brand-red flex items-center justify-center shadow-md"
                     whileHover={{ scale: 1.1, borderColor: 'rgba(239,68,68,0.5)' }}
                     transition={{ duration: 0.2 }}
                   >
