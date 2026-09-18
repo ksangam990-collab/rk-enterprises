@@ -56,7 +56,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "bullet-cam-5mp-outdoor",
@@ -88,7 +88,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "colorvu-night-vision-camera",
@@ -120,7 +120,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "ip-poe-4k-camera",
@@ -152,7 +152,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "wifi-smart-ptz-indoor-camera",
@@ -184,7 +184,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "ptz-optical-zoom-speed-dome",
@@ -216,7 +216,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?auto=format&fit=crop&w=800&q=80",
   },
 
   // --- RECORDING & STORAGE ---
@@ -250,7 +250,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: true,
-    image: "https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "nvr-16-channel-4k-poe",
@@ -281,7 +281,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "surveillance-hard-drive-2tb-4tb",
@@ -343,7 +343,7 @@ export const PRODUCTS = [
     priceLabel: "Get Latest Price",
     inStock: true,
     featured: false,
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605732562742-3023a888e56e?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "smps-power-supply-8ch",
